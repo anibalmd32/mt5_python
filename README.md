@@ -33,7 +33,7 @@ Ordenados de más sencillo a más complejo. Los marcados con ✓ ya están imple
 
 1. **[✓] `s1_connection_check`** — Verifica la conexión con el terminal y muestra cuenta, versión y un tick de ejemplo.
 2. **[✓] `s2_symbols_explorer`** — Lista todos los instrumentos disponibles agrupados por categoría, con spread, decimales y visibilidad.
-3. **`s3_account_snapshot`** — Foto fija del estado actual de la cuenta: balance, equity, posiciones abiertas, órdenes pendientes y P/L, en formato legible.
+3. **[✓] `s3_account_snapshot`** — Foto fija del estado actual de la cuenta: balance, equity, posiciones abiertas, órdenes pendientes y P/L, en formato legible.
 4. **`s4_market_clock`** — Indica qué sesiones del mercado mundial están abiertas (Sídney, Tokio, Londres, Nueva York) y qué pares suelen ser más activos en cada una.
 
 ### Nivel 2 — Datos históricos y visualización

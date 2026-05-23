@@ -25,9 +25,59 @@ def build_account_mock() -> MagicMock:
     account.currency = "USD"
     account.balance = 100_000.0
     account.equity = 100_000.0
+    account.profit = 0.0
+    account.margin = 0.0
+    account.margin_free = 100_000.0
+    account.margin_level = 0.0
     account.leverage = 100
     account.margin_mode = HEDGING_MODE
     return account
+
+
+def build_position_mock(
+    ticket: int = 1000,
+    symbol: str = "EURUSD",
+    ptype: int = 0,
+    volume: float = 0.10,
+    price_open: float = 1.10000,
+    price_current: float = 1.10000,
+    sl: float = 0.0,
+    tp: float = 0.0,
+    profit: float = 0.0,
+    swap: float = 0.0,
+) -> MagicMock:
+    p = MagicMock()
+    p.ticket = ticket
+    p.symbol = symbol
+    p.type = ptype
+    p.volume = volume
+    p.price_open = price_open
+    p.price_current = price_current
+    p.sl = sl
+    p.tp = tp
+    p.profit = profit
+    p.swap = swap
+    return p
+
+
+def build_order_mock(
+    ticket: int = 2000,
+    symbol: str = "EURUSD",
+    otype: int = 2,
+    volume: float = 0.10,
+    price_open: float = 1.10000,
+    sl: float = 0.0,
+    tp: float = 0.0,
+) -> MagicMock:
+    o = MagicMock()
+    o.ticket = ticket
+    o.symbol = symbol
+    o.type = otype
+    o.volume_initial = volume
+    o.price_open = price_open
+    o.sl = sl
+    o.tp = tp
+    return o
 
 
 def build_tick_mock(bid: float = 1.16032, ask: float = 1.16033) -> MagicMock:
