@@ -1,6 +1,20 @@
 # Laboratorio MetaTrader 5 + Python
 
-Colección progresiva de scripts para explorar, analizar y automatizar trading sobre MetaTrader 5 desde Python, pensada para personas que **no necesitan saber de trading** para empezar a usarla. Cada script vive en `src/` como un módulo independiente con una función `run()`, y se orquesta desde [main.py](main.py).
+Colección progresiva de scripts para explorar, analizar y automatizar trading sobre MetaTrader 5 desde Python, pensada para personas que **no necesitan saber de trading** para empezar a usarla. Cada script vive en `src/labs/nivel_X/` como un módulo independiente con una función `run()`, y se orquesta desde [main.py](main.py).
+
+## Estructura
+
+```
+src/labs/
+├── nivel_1_familiarizacion/   ← solo lectura, sin riesgo
+├── nivel_2_datos/             ← descarga y visualización de histórico
+├── nivel_3_analisis/          ← indicadores y escaneo
+├── nivel_4_senales/           ← señales y backtesting
+├── nivel_5_riesgo/            ← gestión y cálculos
+└── nivel_6_ejecucion/         ← bots y dashboards (toca la cuenta)
+```
+
+Dentro de cada nivel los ficheros se prefijan con `s1_`, `s2_`, `s3_`, `s4_` siguiendo el orden del índice.
 
 ## Requisitos
 
@@ -17,10 +31,10 @@ Ordenados de más sencillo a más complejo. Los marcados con ✓ ya están imple
 
 ### Nivel 1 — Familiarización (solo lectura, sin riesgo)
 
-1. **[✓] `connection_check`** — Verifica la conexión con el terminal y muestra cuenta, versión y un tick de ejemplo.
-2. **`symbols_explorer`** — Lista todos los instrumentos disponibles agrupados por tipo (forex, índices, materias primas, cripto, acciones) con su spread y horario.
-3. **`account_snapshot`** — Foto fija del estado actual de la cuenta: balance, equity, posiciones abiertas, órdenes pendientes y P/L, en formato legible.
-4. **`market_clock`** — Indica qué sesiones del mercado mundial están abiertas (Sídney, Tokio, Londres, Nueva York) y qué pares suelen ser más activos en cada una.
+1. **[✓] `s1_connection_check`** — Verifica la conexión con el terminal y muestra cuenta, versión y un tick de ejemplo.
+2. **[✓] `s2_symbols_explorer`** — Lista todos los instrumentos disponibles agrupados por categoría, con spread, decimales y visibilidad.
+3. **`s3_account_snapshot`** — Foto fija del estado actual de la cuenta: balance, equity, posiciones abiertas, órdenes pendientes y P/L, en formato legible.
+4. **`s4_market_clock`** — Indica qué sesiones del mercado mundial están abiertas (Sídney, Tokio, Londres, Nueva York) y qué pares suelen ser más activos en cada una.
 
 ### Nivel 2 — Datos históricos y visualización
 
