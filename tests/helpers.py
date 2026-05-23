@@ -60,6 +60,40 @@ def build_position_mock(
     return p
 
 
+def build_rates_array(n: int = 5):
+    """Estructura idéntica a la que devuelve mt5.copy_rates_from_pos.
+
+    Es un numpy structured array con dtype fijo (time int64, OHLC float64,
+    volúmenes y spread enteros). pandas.DataFrame lo lee directamente.
+    """
+    import numpy as np
+
+    dtype = np.dtype([
+        ("time", "i8"),
+        ("open", "f8"),
+        ("high", "f8"),
+        ("low", "f8"),
+        ("close", "f8"),
+        ("tick_volume", "i8"),
+        ("spread", "i4"),
+        ("real_volume", "i8"),
+    ])
+    rows = [
+        (
+            1_700_000_000 + i * 3600,
+            1.10000 + i * 0.0001,
+            1.10100 + i * 0.0001,
+            1.09900 + i * 0.0001,
+            1.10050 + i * 0.0001,
+            100 + i,
+            1,
+            0,
+        )
+        for i in range(n)
+    ]
+    return np.array(rows, dtype=dtype)
+
+
 def build_order_mock(
     ticket: int = 2000,
     symbol: str = "EURUSD",
