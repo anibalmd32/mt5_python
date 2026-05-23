@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"c:\\\\Users\\\\anibal\\\\Desktop\\\\metatrader_python\\\\\")",
+      "Read(//c/Users/anibal/Desktop/**)",
+      "Bash(\"c:/Users/anibal/Desktop/metatrader_python/.venv/Scripts/pip.exe\" install *)",
+      "Bash(\"./.venv/Scripts/python.exe\" -m pytest -v)"
+    ]
+  }
+}
