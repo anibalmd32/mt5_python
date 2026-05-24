@@ -39,7 +39,7 @@ Ordenados de más sencillo a más complejo. Los marcados con ✓ ya están imple
 ### Nivel 2 — Datos históricos y visualización
 
 5. **[✓] `s5_history_downloader`** — Descarga velas históricas (M1, M5, H1, D1…) de un símbolo a CSV/Parquet para análisis offline.
-6. **`s6_tick_downloader`** — Igual pero a nivel tick (operación a operación), útil para microestructura.
+6. **[✓] `s6_tick_downloader`** — Igual pero a nivel tick (operación a operación), útil para microestructura.
 7. **`s7_chart_viewer`** — Dibuja un gráfico de velas con indicadores básicos usando matplotlib/plotly.
 8. **`s8_performance_comparator`** — Compara el rendimiento porcentual de varios instrumentos en el mismo periodo (¿quién subió más este mes?).
 

@@ -1,5 +1,5 @@
-from src.labs.nivel_2_datos import s5_history_downloader
+from src.labs.nivel_2_datos import s6_tick_downloader
 
 
 if __name__ == "__main__":
-    s5_history_downloader.run(symbol="USDJPY", timeframe="H1", count=500)
+    s6_tick_downloader.run(symbol="USDJPY", hours_back=74.0, flags="all")

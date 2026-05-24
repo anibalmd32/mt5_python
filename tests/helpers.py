@@ -94,6 +94,41 @@ def build_rates_array(n: int = 5):
     return np.array(rows, dtype=dtype)
 
 
+def build_ticks_array(n: int = 5):
+    """Estructura idéntica a la que devuelve mt5.copy_ticks_range.
+
+    Cada tick está separado 100ms del siguiente (realista para FX activo).
+    El timestamp 'time' (segundos) se deriva de 'time_msc' (milisegundos).
+    """
+    import numpy as np
+
+    dtype = np.dtype([
+        ("time", "i8"),
+        ("bid", "f8"),
+        ("ask", "f8"),
+        ("last", "f8"),
+        ("volume", "u8"),
+        ("time_msc", "i8"),
+        ("flags", "u4"),
+        ("volume_real", "f8"),
+    ])
+    base_ms = 1_700_000_000_000
+    rows = [
+        (
+            (base_ms + i * 100) // 1000,
+            1.10000 + i * 0.00001,
+            1.10010 + i * 0.00001,
+            0.0,
+            1,
+            base_ms + i * 100,
+            6,  # bit BID (2) | bit ASK (4)
+            0.0,
+        )
+        for i in range(n)
+    ]
+    return np.array(rows, dtype=dtype)
+
+
 def build_order_mock(
     ticket: int = 2000,
     symbol: str = "EURUSD",
