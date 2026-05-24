@@ -5,7 +5,8 @@
       "Read(//c/Users/anibal/Desktop/**)",
       "Bash(\"c:/Users/anibal/Desktop/metatrader_python/.venv/Scripts/pip.exe\" install *)",
       "Bash(\"./.venv/Scripts/python.exe\" -m pytest -v)",
-      "Bash(\"c:/Users/anibal/Desktop/metatrader_python/.venv/Scripts/pip.exe\" show *)"
+      "Bash(\"c:/Users/anibal/Desktop/metatrader_python/.venv/Scripts/pip.exe\" show *)",
+      "Bash(\"./.venv/Scripts/python.exe\" -m pytest)"
     ]
   }
 }
