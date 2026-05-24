@@ -1,5 +1,10 @@
-from src.labs.nivel_2_datos import s6_tick_downloader
+from src.labs.nivel_2_datos import s7_chart_viewer
 
 
 if __name__ == "__main__":
-    s6_tick_downloader.run(symbol="USDJPY", hours_back=74.0, flags="all")
+    s7_chart_viewer.run(
+        symbol="USDJPY",
+        timeframe="H1",
+        count=300,
+        indicators=("SMA20", "SMA50"),
+    )
